@@ -1,15 +1,25 @@
-## Initializing servers
+# Initialization
+
+## Servers
 ```
 cd ./servers
 ./init.sh [server number ie. 1]
 ```
 
-## Initializing clients
+## Clients
 ```
 
 ```
 
-## Initializing routers
+## Routers
 ```
 
 ```
+
+---
+
+## Restoring internet connection
+```
+./restore-internet.sh
+```
+*note: it will restart VM*
