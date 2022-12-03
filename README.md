@@ -8,12 +8,20 @@ cd ./servers
 
 ## Clients
 ```
-
+cd ./clients
+./init.sh [client number ie. 1]
 ```
 
-## Routers
+## Router1
+```
+cd ./router2
+./init.sh
 ```
 
+## Router2
+```
+cd ./router1
+./init.sh
 ```
 
 ---
@@ -22,4 +30,4 @@ cd ./servers
 ```
 ./restore-internet.sh
 ```
-*note: it will restart VM*
+*note: This will restart VM*
