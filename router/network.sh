@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 systemctl disable NetworkManager
 systemctl stop NetworkManager
 systemctl disable network
