@@ -1,4 +1,11 @@
 #!/bin/bash
-nmcli con mod "Połączenie przewodowe 1" connection.id enp0s3
-nmcli con mod enp0s3 ipv4.addresses "192.168.$1.2/24" ipv4.gateway "192.168.$1.1" ipv4.method "static"
-nmcli con up enp0s3
+systemctl stop NetworkManager network
+
+ip addr flush dev enp0s3
+ip r flush dev enp0s3
+
+ip addr add 192.168.$1.2/24 dev enp0s3
+ip route add 192.168.4.0/24 dev enp0s3
+route add default gw 192.168.4.1 enp0s3
+ip route del 192.168.4.0/24
+

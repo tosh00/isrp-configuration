@@ -1,0 +1,1 @@
+mount -t vboxsf shered ~/shared
