@@ -12,6 +12,8 @@ ip addr add 192.168.5.$(($1+1))/24 dev enp0s3
 
 ip route flush dev enp0s3
 
+ip link set dev enp0s3 up
+
 ip route add 192.168.200.0/24 dev enp0s3
 route add default gw 192.168.200.200 enp0s3
 ip route del 192.168.200.0/24
